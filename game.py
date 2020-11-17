@@ -13,7 +13,7 @@ class Window(QWidget):
         super().__init__()
         self.setWindowTitle('Rock Paper Scissors Game - Developed my Marjan Shapkaroski')
         self.setFixedSize(570,370)
-        self.setWindowIcon(QIcon('RockPaperScissors\images\game.png'))
+        self.setWindowIcon(QIcon('images\\game.png'))
         self.UI()
 
     def UI(self):
@@ -29,16 +29,16 @@ class Window(QWidget):
 
         # Computer & Player Images
         self.imageComputer = QLabel(self)
-        self.imageComputer.setPixmap(QPixmap('RockPaperScissors\images\paper.png'))
+        self.imageComputer.setPixmap(QPixmap('images\\paper.png'))
         self.imageComputer.move(10,100)
 
         self.imagePlayer = QLabel(self)
-        self.imagePlayer.setPixmap(QPixmap('RockPaperScissors\images\paper.png'))
+        self.imagePlayer.setPixmap(QPixmap('images\\paper.png'))
         self.imagePlayer.move(350,100)
 
         # VS images
         self.imageVS = QLabel(self)
-        self.imageVS.setPixmap(QPixmap('RockPaperScissors\images\game.png'))
+        self.imageVS.setPixmap(QPixmap('images\\game.png'))
         self.imageVS.move(240,130)
 
         # Buttons
@@ -68,19 +68,19 @@ class Window(QWidget):
     def playGame(self):
         self.rndComputer = randint(0,2)
         if self.rndComputer == 0:
-            self.imageComputer.setPixmap(QPixmap('RockPaperScissors\\images\\rock.png'))
+            self.imageComputer.setPixmap(QPixmap('images\\rock.png'))
         elif self.rndComputer == 1:
-            self.imageComputer.setPixmap(QPixmap('RockPaperScissors\\images\\paper.png'))
+            self.imageComputer.setPixmap(QPixmap('images\\paper.png'))
         else:
-            self.imageComputer.setPixmap(QPixmap('RockPaperScissors\\images\\scissors.png'))
+            self.imageComputer.setPixmap(QPixmap('images\\scissors.png'))
             
         self.rndPlayer = randint(0,2)
         if self.rndPlayer == 0:
-            self.imagePlayer.setPixmap(QPixmap('RockPaperScissors\\images\\rock.png'))
+            self.imagePlayer.setPixmap(QPixmap('images\\rock.png'))
         elif self.rndPlayer == 1:
-            self.imagePlayer.setPixmap(QPixmap('RockPaperScissors\\images\\paper.png'))
+            self.imagePlayer.setPixmap(QPixmap('images\\paper.png'))
         else:
-            self.imagePlayer.setPixmap(QPixmap('RockPaperScissors\\images\\scissors.png'))
+            self.imagePlayer.setPixmap(QPixmap('images\\scissors.png'))
             
     def gameLogic(self):
         global computerScore
